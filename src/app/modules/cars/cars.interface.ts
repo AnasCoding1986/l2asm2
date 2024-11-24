@@ -8,7 +8,7 @@ export enum CarCategory {
     Convertible = 'Convertible',
   }
 
-export type Student = {
+export type Cars = {
     name: string;
     brand: string;
     model: string;
