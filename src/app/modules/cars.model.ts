@@ -21,6 +21,5 @@ const carsSchema = new Schema<Cars>({
     
 )
 
-const Car = model<Cars>('Car', carsSchema);
+export const CarModal = model<Cars>('Car', carsSchema);
 
-export default Car;
