@@ -11,7 +11,13 @@ const getAllCarDB = async() => {
     return result
 }
 
+const getSingleCarDB = async(_id:string) => {
+    const result = await CarModal.findOne({_id});
+    return result
+}
+
 export const carsServices = {
     createCarIntoDB,
-    getAllCarDB
+    getAllCarDB,
+    getSingleCarDB
 }
