@@ -6,6 +6,12 @@ const createCarIntoDB = async(car:Cars) => {
     return result
 }
 
+const getAllStudentDB = async() => {
+    const result = await CarModal.find();
+    return result
+}
+
 export const carsServices = {
     createCarIntoDB,
+    getAllStudentDB
 }
