@@ -33,7 +33,7 @@ const getAllCars = async (req: Request, res: Response) => {
 
 const singleCar = async (req: Request, res: Response) => {
   try {
-    const {studentId} = req.params;
+    const { studentId } = req.params;
     const result = await carsServices.getSingleCarDB(studentId);
 
     res.status(200).json({
@@ -49,5 +49,5 @@ const singleCar = async (req: Request, res: Response) => {
 export const carsController = {
   createCar,
   getAllCars,
-  singleCar
+  singleCar,
 };
