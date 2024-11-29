@@ -21,7 +21,7 @@ const getSingleCarDB = async (_id: string) => {
 
 // Service to update a car in the DB
 const updateCarDB = async (_id: string, data: Cars) => {
-  const result = await CarModal.findByIdAndUpdate(_id, data, { new: true });
+  const result = await CarModal.findByIdAndUpdate({_id}, data, { new: true });
   return result;
 };
 
