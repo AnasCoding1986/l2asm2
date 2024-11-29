@@ -10,4 +10,8 @@ router.get('/', carsController.getAllCars);
 
 router.get('/:studentId', carsController.singleCar);
 
+router.put('/:studentId', carsController.updateCarController);
+
+router.delete('/:studentId', carsController.deleteCar);
+
 export const carRouter = router;

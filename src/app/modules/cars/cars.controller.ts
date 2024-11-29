@@ -46,8 +46,41 @@ const singleCar = async (req: Request, res: Response) => {
   }
 };
 
+const updateCarController = async (req: Request, res: Response) => {
+  try {
+    const { studentId } = req.params;
+    const body = req.body;
+    const result = await carsServices.updateCarDB(studentId,body);
+
+    res.status(200).json({
+      success: true,
+      message: 'Car updated successfully',
+      data: result,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const deleteCar = async (req: Request, res: Response) => {
+  try {
+    const { studentId } = req.params;
+    const result = await carsServices.deleteCarDB(studentId);
+
+    res.status(200).json({
+      success: true,
+      message: 'Car deleted successfully',
+      data: result,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const carsController = {
   createCar,
   getAllCars,
   singleCar,
+  updateCarController,
+  deleteCar
 };
