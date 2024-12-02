@@ -22,7 +22,7 @@ export const getAllOrders = async (req: Request, res: Response) => {
   try {
     const orders = await OrderService.getAllOrders();
     res.status(200).json({
-      message: "Orders retrieved successfully",
+      message: "Orders collected successfully",
       success: true,
       data: orders,
     });
