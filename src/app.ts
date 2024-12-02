@@ -11,7 +11,7 @@ app.use(cors());
 
 // applications routes
 app.use('/api/v1/cars', carRouter);
-app.use("/api/orders", orderRouter);
+app.use("/api/v1/orders", orderRouter);
 
 const getAController = (req: Request, res: Response) => {
   res.send('Hello World!');

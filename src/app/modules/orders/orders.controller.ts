@@ -5,7 +5,7 @@ export const createOrder = async (req: Request, res: Response) => {
   try {
     const order = await OrderService.createOrder(req.body);
     res.status(201).json({
-      message: "Order created successfully",
+      message: "Order created successfully is not working",
       success: true,
       data: order,
     });
